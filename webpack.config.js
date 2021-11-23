@@ -10,7 +10,8 @@ module.exports = {
     filename: 'main.js', */
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.html$/i,
         loader: 'html-loader',
         options: {
@@ -18,7 +19,12 @@ module.exports = {
            /*  attributes: false,
             minimize: false */
         },
-    }]
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      },
+  ]
   },
   plugins: [
     new HtmlWebpackPlugin({
