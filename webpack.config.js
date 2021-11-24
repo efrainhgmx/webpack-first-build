@@ -22,8 +22,13 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        exclude: /styles.css$/,
         use: ['style-loader', 'css-loader']
       },
+      {
+        test: /styles.css$/,
+
+      }
   ]
   },
   plugins: [
