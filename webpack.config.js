@@ -29,9 +29,16 @@ module.exports = {
       {
         test: /styles.css$/,
         use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
       }
   ]
   },
+
+  optimization: {},
+
   plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html',
